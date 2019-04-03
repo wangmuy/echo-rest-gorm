@@ -1,0 +1,12 @@
+version: '3'
+services:
+  sampledb:
+    image: mysql:5.7
+    container_name: chinook-sampledb
+    ports:
+      - 3307:3306
+    volumes:
+      - ./initdb.d:/docker-entrypoint-initdb.d
+      - ./data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456

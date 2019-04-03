@@ -1,0 +1,6 @@
+{
+  "DB_DIALECT": "mysql",
+  "DB_CONN": "root:123456@(localhost:3307)/Chinook?charset=utf8",
+  "DB_MAX_IDLE_CONNS": 20,
+  "DB_MAX_OPEN_CONNS": 100
+}
