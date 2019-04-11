@@ -4,7 +4,7 @@
 * Configuration
   - [x] define/read configs
   - [ ] dev/prod seperated configs
-  - [ ] Packaging/Docker
+  - [ ] versioning/packaging/docker
 * API/Router
   - [x] Grouped router
   - [ ] Request Validation(GET param/POST json)
