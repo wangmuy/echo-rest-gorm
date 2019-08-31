@@ -8,7 +8,11 @@ import (
 )
 
 func Init(e *echo.Echo, c *config.Config) *echo.Echo {
-	dbGroup := e.Group("/db")
-	api.DbGroup(dbGroup)
+	if c.DB_CONN != "" {
+		dbGroup := e.Group("/db")
+		api.DbGroup(dbGroup)
+	}
+	printConnGroup := e.Group("/printconn")
+	api.PrintConnGroup(printConnGroup)
 	return e
 }

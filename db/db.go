@@ -13,6 +13,9 @@ var db *gorm.DB
 
 func Init(c *config.Config) {
 	var err error
+	if c.DB_CONN == "" {
+		return
+	}
 	db, err = gorm.Open(c.DB_DIALECT, c.DB_CONN)
 	if err != nil {
 		fmt.Println(err)
